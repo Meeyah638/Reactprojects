@@ -6,27 +6,35 @@ const Shop = () => {
     const [allProducts, setAllProducts] = useState([])
     const [showForm, setShowForm] = useState(false)
     const [product, setProduct] = useState({
-        image: logo,
+        image: null,
         title: '',
         price: '',
         desc: '',
     })
-
+    const handleImageChange = (e) => {
+        const allFiles = e.target.files
+        const [img] = allFiles
+        const url = URL.createObjectURL(img)
+        setProduct({ ...product, [e.target.name]: url })
+        console.log(product.image)
+    }
     const handleChange = (e) => {
-        // const {name, value} = e.target
         setProduct({ ...product, [e.target.name]: e.target.value })
     }
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
         setAllProducts([...allProducts, product])
+        setShowForm(false)
         setProduct({
-            image: logo,
+            image: null,
             title: '',
             price: '',
             desc: '',
         })
         console.log(allProducts)
+
     }
 
     return (
@@ -34,7 +42,7 @@ const Shop = () => {
             <button className='addproduct' onClick={() => setShowForm(!showForm)}>
                 ADD PRODUCT
             </button>
-            {showForm && allProducts.length === 0 && (
+            {allProducts.length === 0 && (
                 <div className="empty-cart">
                     <p>Cart is currently empty</p>
                     <img src={image} alt="" className='cartImage' />
@@ -58,11 +66,11 @@ const Shop = () => {
                     </div>
                     <div className='inputs'>
                         <label>Preview</label>
-                        <img src={logo} className='prodImage' alt="imagePreview" />
+                        <img src={product.image} className='prodImage' alt="imagePreview" />
                     </div>
                     <div className='inputs'>
                         <label htmlFor="file">Picture Image</label>
-                        <input type="file" id='file' />
+                        <input type="file" id='file' name='image' onChange={handleImageChange}/>
                     </div>
 
                     <button className='add'>
@@ -75,7 +83,7 @@ const Shop = () => {
                 {
                     allProducts.map((prod, index) => (
                         <div className='product' key={index}>
-                            <img src={logo} alt="" className='prodImage' />
+                            <img src={prod.image} alt="" className='prodImage' />
                             <p className='prodTitle'>{prod.title} </p>
                             <div className='side'>
                                 <p>${prod.price}</p>
