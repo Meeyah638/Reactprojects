@@ -34,10 +34,11 @@ const Shop = () => {
             <button className='addproduct' onClick={() => setShowForm(!showForm)}>
                 ADD PRODUCT
             </button>
-            <div className="empty-cart">
-                <p>Cart is currently empty</p>
-                <img src={image} alt="" className='cartImage' />
-            </div>
+            {showForm && allProducts.length === 0 && (
+                <div className="empty-cart">
+                    <p>Cart is currently empty</p>
+                    <img src={image} alt="" className='cartImage' />
+                </div>)}
 
             {/* ADD PRODUCT FORM */}
             {
