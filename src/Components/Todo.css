@@ -1,0 +1,33 @@
+.All-items {
+    margin-top: 40px;
+    width: 500px;
+    border: 2px solid purple;
+    height: fit-content;
+    padding-top: 20px;
+    border-radius: 10px;
+    margin-left: 400px;
+    background: linear-gradient(skyblue, gray,rgb(180, 74, 180));
+}
+
+.input-text {
+    padding: 15px 30px;
+    margin-left: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(211, 200, 200);
+}
+
+.add-task {
+    background-color: rgb(56, 56, 146);
+    color: white;
+    margin-left: 40px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 20px;
+}
+ul{
+    overflow-y: scroll;
+    max-height: 150px;
+}

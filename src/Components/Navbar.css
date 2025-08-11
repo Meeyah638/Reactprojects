@@ -1,0 +1,47 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar {
+    background-color: purple;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    border-bottom: 4px solid black;
+}
+
+.logo-img {
+    width: 100px;
+
+}
+
+.nav-lists {
+    list-style-type: none;
+    display: flex;
+    gap: 100px;
+    text-decoration: none;
+}
+
+.nav-lists li {
+    font-size: 20px;
+}
+
+.nav-links {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.login-btn{
+    color: white;
+    background-color: blueviolet;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.login-btn:hover{
+    color: blueviolet;
+    background-color: white;
+}

@@ -1,0 +1,42 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.react-texts {
+    background-color: purple;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+.Card {
+    display: flex;
+    gap: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.first-cardContent {
+    background-color: rgb(175, 166, 166);
+    border-radius: 7px;
+    width: 700px;
+    margin-top: 20px;
+    padding-left: 5px;
+}
+
+.second-cardContent {
+    background-color: rgb(211, 152, 211);
+    border-radius: 7px;
+    width: 700px;
+    margin-top: 20px;
+    padding-left: 5px;
+}
+
+p {
+    font-size: 25px;
+    margin: 20px;
+}
+
+h1 {
+    margin-left: 20px;
+}
