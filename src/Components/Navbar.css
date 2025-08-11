@@ -13,10 +13,11 @@
 
 .logo-img {
     width: 100px;
-
+    
 }
 
 .nav-lists {
+    overflow: hidden;
     list-style-type: none;
     display: flex;
     gap: 100px;
