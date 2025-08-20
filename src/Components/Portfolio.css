@@ -1,0 +1,83 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.allfirst-Section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-Section {
+  margin-left: 40px;
+}
+
+.my-name {
+  color: orange;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.Description {
+  font-size: 18px;
+}
+
+.skill {
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.country {
+  color: purple;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.About-Me-btn {
+  padding: 20px;
+  background: chocolate;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.About-Me-btn:hover {
+  background-color: wheat;
+  color: orange;
+  font-weight: bold;
+}
+
+.skill-Section {
+  font-size: 25px;
+  text-align: center;
+}
+
+.Picture img {
+  width: 100px;
+}
+
+.Skills-btn {
+  margin-left: 100px;
+}
+
+.Skills-btn button {
+  margin: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: chocolate;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.Skills-btn button:hover {
+  background-color: wheat;
+  color: chocolate;
+  font-weight: bold;
+  font-size: 20px;
+}

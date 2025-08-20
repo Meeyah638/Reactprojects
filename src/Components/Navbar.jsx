@@ -1,16 +1,21 @@
 import React from 'react'
-import logo from "../assets/react.svg"
+import image from "../assets/Orangespalsh.jpg"
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 const Navbar = () => {
-  return (
-    <div>
-        <nav className='navbar'>
-                <div>
-                    <img src={logo} alt="Reactlogo" className='logo-img' /></div>
+    return (
+        <div>
+            <img src="{image}" alt="" />
+            <nav className='navbar'>
+                <div className='Logo-name'>
+                    <h1>Mee<span className='yah-part'>Yah</span></h1>
+                </div>                                                                  
                 <ul className='nav-lists'>
+                    <li className='port-active'>
+                        <Link to='/Portfolio' className='nav-links active'>Portfolio</Link>
+                    </li>
                     <li>
-                        <Link to='/Card' className='nav-links'>Card</Link>
+                        <Link to='/Contact' className='nav-links'>Contact</Link>
                     </li>
                     <li>
                         <Link to='/Todo' className='nav-links'>Todo</Link>
@@ -21,12 +26,12 @@ const Navbar = () => {
                 </ul>
                 <div>
                     <button className='login-btn'>
-                        LOGIN
+                        Login
                     </button>
                 </div>
             </nav>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Navbar

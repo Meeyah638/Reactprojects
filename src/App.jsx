@@ -1,28 +1,11 @@
-// import React from 'react'
-// import Card from './Components/Card'
-// import { BrowserRouter as Router,Routes,Route} from 'react-router-dom'
-// import Mainlayouts from './Layouts/Mainlayouts'
-// import Todo from './Components/Todo.jsx'
-// const App = () => {
-//   return (
-//     <Router>
-//         <Routes>
-//           <Route element={<Mainlayouts/>}>
-//             <Route index element={<Card/>}/>
-//             <Route path='/Todo' element={<Todo/>}/>
-//           </Route>
-//         </Routes>
-//       </Router>  
-//   )
-// }
 
-// export default App
 import React from 'react'
 import { BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Mainlayouts from './Layouts/Mainlayouts'
-import Card from './Components/Card'
+import Contact from './Components/Contact'
 import Todo from './Components/Todo'
 import Shop from './Components/Shop'
+import Portfolio from './Components/Portfolio'
 
 const App = () => {
     return (
@@ -30,8 +13,9 @@ const App = () => {
             <Router>
                 <Routes>
                     <Route element={<Mainlayouts />}>
-                        <Route index element={<Card />} />
-                        <Route path='/Card' element={<Card/>}/>
+                        <Route index element={<Portfolio/>} />
+                        <Route path='/Portfolio' element={<Portfolio/>}/>
+                        <Route path='/Contact' element={<Contact/>}/>
                         <Route path='/Todo' element={<Todo/>}/>
                         <Route path='/Shop' element={<Shop/>}/>
                     </Route>

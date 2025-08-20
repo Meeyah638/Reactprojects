@@ -1,0 +1,39 @@
+.allform{
+margin-top: 30px;
+   
+}
+.getin{
+    text-align: center;
+}
+.callme{
+    display: flex;
+    justify-content: space-evenly;
+}
+.notes p{
+    font-weight: bold;
+    color: orange;
+    font-size: 20px;
+}
+.input-Section input{
+    margin: 10px;
+}
+input{
+    padding: 25px 35px;
+    background-color: aqua;
+    border: none;
+    font-size: 15px;
+}
+.contact-btn button{
+    padding: 15px;
+    background-color: chocolate;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    margin-left: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.error{
+    color: red;
+    font-weight: bold;
+}
