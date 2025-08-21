@@ -19,8 +19,8 @@ const Portfolio = () => {
                             Contact Me
                         </button>
                     </Link>   </div>
-                <div>
-                    <img src="{picture}" alt="Mypicture" className='Picture' />
+                <div className='Picture'>
+                    <img src={picture} alt="Mypicture"/>
                 </div>
             </div>
             <div className='second-Section'>

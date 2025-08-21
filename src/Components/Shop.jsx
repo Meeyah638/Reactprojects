@@ -21,24 +21,49 @@ const Shop = () => {
     const handleChange = (e) => {
         setProduct({ ...product, [e.target.name]: e.target.value })
     }
+    const [errorLog, seterrorLog] = useState({})
 
+    const handleError = () => {
+        const errors = {}
+        if (!product.title) {
+            errors.title = 'Title of your product is required'
+        }
+        if (!product.price) {
+            errors.price = 'Price of your product is required'
+        }
+        if (!product.desc) {
+            errors.desc = 'Description of your product is required'
+        }
+        if (product.image === null) {
+            errors.image = 'Image of your product is required'
+        }
+        return errors
+    }
 
-    const handleSubmit = (e) => {
+const handleSubmit = (e) => {
         e.preventDefault()
-        setAllProducts([...allProducts, product])
-        setShowForm(false)
-        setProduct({
-            image: null,
-            title: '',
-            price: '',
-            desc: '',
-        })
-        console.log(allProducts)
 
+        const err = handleError()
+        if (Object.keys(err).length > 0) {
+            seterrorLog(err)
+            console.log(errorLog)
+        }
+        else {
+            seterrorLog({})
+            setAllProducts([...allProducts, product])
+            setShowForm(false)
+            setProduct({
+                image: null,
+                title: '',
+                price: '',
+                desc: '',
+            })
+            // console.log(allProducts)
+        }
     }
 
     return (
-        <div >
+        <div>
             <button className='addproduct' onClick={() => setShowForm(!showForm)}>
                 ADD PRODUCT
             </button>
@@ -54,25 +79,29 @@ const Shop = () => {
                 <form onSubmit={handleSubmit}>
                     <div className='inputs'>
                         <label htmlFor="title">name</label>
-                        <input type="text" id='title' name='title' value={product.title} onChange={handleChange} required />
+                        <input type="text" id='title' name='title' value={product.title} onChange={handleChange} />
+                        {errorLog.title && <span className='error'> {errorLog.title}</span>}
                     </div>
                     <div className='inputs'>
                         <label htmlFor="price">Price</label>
-                        <input type="number" id='price' name='price' value={product.price} onChange={handleChange} required />
+                        <input type="number" id='price' name='price' value={product.price} onChange={handleChange} />
+                        {errorLog.price && <span className='error'>{errorLog.price}</span>}
                     </div>
                     <div className='inputs'>
                         <label htmlFor="desc">Description</label>
                         <textarea className='desc' name="desc" value={product.desc} onChange={handleChange} id="desc"></textarea>
+                        {errorLog.desc && <span className='error'>{errorLog.desc}</span>}
                     </div>
                     <div className='inputs'>
                         <label>Preview</label>
                         <img src={product.image} className='prodImage' alt="imagePreview" />
+                        {errorLog.image && <span className='error'>{errorLog.image}</span>}
                     </div>
                     <div className='inputs'>
                         <label htmlFor="file">Picture Image</label>
-                        <input type="file" id='file' name='image' onChange={handleImageChange}/>
+                        <input type="file" id='file' name='image' onChange={handleImageChange} />
                     </div>
-
+                    {errorLog.image && <span className='error'>{errorLog.image}</span>} <br />
                     <button className='add'>
                         ADD PRODUCT
                     </button>

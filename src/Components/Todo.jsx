@@ -27,7 +27,7 @@ const Todo = () => {
             <input type="text" value={inputValue} onChange={changeValue}
                 placeholder='Add item e.g. Read my books' className='input-text' />
             <button onClick={addTask} className='add-task'>Add Task</button>
-            <ul>
+            <ul className='todolist'>
                 {
                     toDo.map((item, id) => (
                         <div key={id} style={{
@@ -35,8 +35,8 @@ const Todo = () => {
                             justifyContent: 'space-between'
                         }}>
                             <li style={{
-                                listStyleType: 'none',
-                            }}>{item}</li><FcEmptyTrash size={25}
+                                listStyleType: 'none'
+                            }}>{item}</li><FcEmptyTrash className='trash' size={30}
                                 onClick={() => handleDelete(id)} />
 
                         </div>

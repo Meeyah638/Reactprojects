@@ -7,9 +7,10 @@
    font-size: 25px;
    border-radius: 10% /20%;
    border: none;
-   margin: 30px 20px 40px 500px;
+   /* margin: 30px 20px 40px 500px; */
    width: fit-content;
-   text-align: center;
+   /* text-align: center; */
+   margin: 40px auto 25px auto;
 }
 
 .empty-cart {
@@ -18,7 +19,7 @@
    border: 1px solid gray;
    border-radius: 7px;
    width: 400px;
-   margin-left: 400px;
+   margin: 10px auto 30px auto;
    box-shadow: 2px 0px 10px black;
    padding-left: 130px;
 }

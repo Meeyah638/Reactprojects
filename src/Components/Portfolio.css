@@ -4,7 +4,7 @@
 
 .allfirst-Section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .first-Section {
@@ -44,7 +44,9 @@
   font-size: 20px;
   cursor: pointer;
 }
-
+.hello{
+  font-size: 25px;
+}
 .About-Me-btn:hover {
   background-color: wheat;
   color: orange;
@@ -57,7 +59,13 @@
 }
 
 .Picture img {
-  width: 100px;
+  width: 300px;
+  margin-right: 200px;
+  margin-top: 40px;
+  box-shadow: 2px 0px 10px blueviolet;
+  height: 300px;
+  /* border: 4px solid blueviolet; */
+  border-radius: 300px;
 }
 
 .Skills-btn {

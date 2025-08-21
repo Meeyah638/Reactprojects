@@ -1,12 +1,13 @@
 .All-items {
-    margin-top: 40px;
-    width: 500px;
+    /* width: 500px; */
     border: 2px solid purple;
     height: fit-content;
     padding-top: 20px;
     border-radius: 10px;
-    margin-left: 400px;
-    background: linear-gradient(skyblue, gray,rgb(180, 74, 180));
+    margin: 40px auto auto auto;
+    width: 500px;
+    background: linear-gradient(skyblue, gray, rgb(180, 74, 180));
+    text-align: center;
 }
 
 .input-text {
@@ -27,7 +28,18 @@
     font-weight: bold;
     font-size: 20px;
 }
-ul{
+
+ul {
     overflow-y: scroll;
     max-height: 150px;
+    padding: 10px 40px 20px 80px;
+    scrollbar-width: thin;
+}
+
+li {
+    padding-top: 20px;
+}
+.trash {
+    cursor: pointer;
+    
 }

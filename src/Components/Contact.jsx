@@ -28,7 +28,8 @@ const Contact = () => {
         e.preventDefault();
         const validationErrors = validate();
         if (Object.keys(validationErrors).length === 0) {
-            alert("Form submitted successfully ✅");        } else {
+            alert("Form submitted successfully ✅");
+        } else {
             setErrors(validationErrors);
         }
     };
@@ -60,32 +61,27 @@ const Contact = () => {
                             value={formData.name}
                             onChange={handleChange}
                         />
-                        {errors.name && <p className="error">{errors.name}</p>}
-                        <br />
+                        {errors.name && <span className="error">{errors.name}</span>}
 
                         <input
-                            type="email"
-                            placeholder='Email'
-                            name='email'
+                            type="email" 
+                            placeholder='Email' 
+                            name='email' 
                             value={formData.email}
                             onChange={handleChange}
                         />
-                        {errors.email && <p className="error">{errors.email}</p>}
-                        <br />
+                        {errors.email && <span className="error">{errors.email}</span>}
 
-                        <input
-                            type="text"
-                            placeholder='Message'
-                            name='message'
-                            value={formData.message}
-                            onChange={handleChange}
-                        />
-                        {errors.message && <p className="error">{errors.message}</p>}
-                        <br />
+                        <textarea name="message" 
+                        id="Message" placeholder='Message' cols={30} rows={5} 
+                        value={formData.message}
+                        onChange={handleChange} 
+                        className='textA'></textarea>
+                        {errors.message && <span className="error">{errors.message}</span>}
 
                         <div className='contact-btn'>
                             <button type="submit" onClick={handleSubmit}>
-                                Submit Message
+                                Submit
                             </button>
                         </div>
                     </div>
