@@ -58,7 +58,6 @@ const handleSubmit = (e) => {
                 price: '',
                 desc: '',
             })
-            // console.log(allProducts)
         }
     }
 
@@ -70,10 +69,9 @@ const handleSubmit = (e) => {
             {allProducts.length === 0 && (
                 <div className="empty-cart">
                     <p>Cart is currently empty</p>
-                    <img src={image} alt="" className='cartImage' />
+                    <img src={image} alt="" className='cartImage'/>
                 </div>)}
 
-            {/* ADD PRODUCT FORM */}
             {
                 showForm &&
                 <form onSubmit={handleSubmit}>
@@ -112,7 +110,7 @@ const handleSubmit = (e) => {
                 {
                     allProducts.map((prod, index) => (
                         <div className='product' key={index}>
-                            <img src={prod.image} alt="" className='prodImage' />
+                            <img src={prod.image} alt="" className='prodImage'/>
                             <p className='prodTitle'>{prod.title} </p>
                             <div className='side'>
                                 <p>${prod.price}</p>

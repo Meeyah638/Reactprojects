@@ -1,45 +1,66 @@
 .All-items {
-    /* width: 500px; */
     border: 2px solid purple;
     height: fit-content;
-    padding-top: 20px;
+    padding: 20px;
     border-radius: 10px;
-    margin: 40px auto auto auto;
-    width: 500px;
+    margin: 40px auto;
+    width: 90%;             
+    max-width: 500px;        
     background: linear-gradient(skyblue, gray, rgb(180, 74, 180));
     text-align: center;
+    box-sizing: border-box; 
 }
 
 .input-text {
-    padding: 15px 30px;
-    margin-left: 30px;
+    padding: 12px 20px;
+    margin: 10px 5px;
     border: none;
     border-radius: 10px;
     background-color: rgb(211, 200, 200);
+    width: 60%;              
+    max-width: 250px;
 }
 
 .add-task {
     background-color: rgb(56, 56, 146);
     color: white;
-    margin-left: 40px;
-    padding: 10px 20px;
+    margin: 10px 5px;
+    padding: 10px 16px;
     border: none;
     border-radius: 7px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 ul {
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 150px;
-    padding: 10px 40px 20px 80px;
+    padding: 10px 20px;
     scrollbar-width: thin;
 }
 
 li {
-    padding-top: 20px;
+    padding-top: 15px;
 }
+
 .trash {
     cursor: pointer;
-    
+}
+
+@media (max-width: 600px) {
+    .input-text {
+        width: 100%;       
+        margin: 8px 0;
+    }
+
+    .add-task {
+        width: 100%;     
+        margin: 8px 0;
+        font-size: 18px;
+    }
+
+    ul {
+        padding: 10px;
+    }
 }
